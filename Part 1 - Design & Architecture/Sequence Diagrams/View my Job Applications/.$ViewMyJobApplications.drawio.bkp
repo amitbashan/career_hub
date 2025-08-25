@@ -1,0 +1,167 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/28.0.6 Chrome/138.0.7204.100 Electron/37.2.3 Safari/537.36" version="28.0.6">
+  <diagram name="Page-1" id="f29tUM07GWlSZpIzWqOe">
+    <mxGraphModel dx="848" dy="648" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="l1KVzMSHZLaGL1OvyLBm-1" value="&lt;b&gt;Software Engineering Course Project&lt;/b&gt;&lt;div&gt;&lt;b&gt;Project Name: CareerHub&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;Topic: Career management system and job search for students&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;Author: Amit Bashan&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;View my Job Applications Diagram&lt;/b&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="380" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="l1KVzMSHZLaGL1OvyLBm-2" value="" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};participant=umlActor;" vertex="1" parent="1">
+          <mxGeometry x="40" y="162" width="20" height="398" as="geometry" />
+        </mxCell>
+        <mxCell id="l1KVzMSHZLaGL1OvyLBm-3" value="" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" vertex="1" parent="l1KVzMSHZLaGL1OvyLBm-2">
+          <mxGeometry x="5" y="50" width="10" height="340" as="geometry" />
+        </mxCell>
+        <mxCell id="l1KVzMSHZLaGL1OvyLBm-4" value="Student" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="20" y="130" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="l1KVzMSHZLaGL1OvyLBm-5" value="Browser" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" vertex="1" parent="1">
+          <mxGeometry x="144" y="162" width="100" height="398" as="geometry" />
+        </mxCell>
+        <mxCell id="l1KVzMSHZLaGL1OvyLBm-6" value="" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" vertex="1" parent="l1KVzMSHZLaGL1OvyLBm-5">
+          <mxGeometry x="45" y="60" width="10" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="l1KVzMSHZLaGL1OvyLBm-7" value="" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" vertex="1" parent="l1KVzMSHZLaGL1OvyLBm-5">
+          <mxGeometry x="45" y="236" width="10" height="154" as="geometry" />
+        </mxCell>
+        <mxCell id="l1KVzMSHZLaGL1OvyLBm-9" value="Web Server" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" vertex="1" parent="1">
+          <mxGeometry x="304" y="162" width="100" height="398" as="geometry" />
+        </mxCell>
+        <mxCell id="l1KVzMSHZLaGL1OvyLBm-10" value="" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" vertex="1" parent="l1KVzMSHZLaGL1OvyLBm-9">
+          <mxGeometry x="45" y="80" width="10" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="l1KVzMSHZLaGL1OvyLBm-11" value="" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" vertex="1" parent="l1KVzMSHZLaGL1OvyLBm-9">
+          <mxGeometry x="45" y="259" width="10" height="111" as="geometry" />
+        </mxCell>
+        <mxCell id="l1KVzMSHZLaGL1OvyLBm-13" value="Database" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" vertex="1" parent="1">
+          <mxGeometry x="634" y="162" width="100" height="398" as="geometry" />
+        </mxCell>
+        <mxCell id="l1KVzMSHZLaGL1OvyLBm-14" value="" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" vertex="1" parent="l1KVzMSHZLaGL1OvyLBm-13">
+          <mxGeometry x="45" y="105" width="10" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="l1KVzMSHZLaGL1OvyLBm-15" value="" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" vertex="1" parent="l1KVzMSHZLaGL1OvyLBm-13">
+          <mxGeometry x="45" y="290.5" width="10" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="l1KVzMSHZLaGL1OvyLBm-17" value="API Controller" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" vertex="1" parent="1">
+          <mxGeometry x="474" y="160" width="100" height="400" as="geometry" />
+        </mxCell>
+        <mxCell id="l1KVzMSHZLaGL1OvyLBm-18" value="" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" vertex="1" parent="l1KVzMSHZLaGL1OvyLBm-17">
+          <mxGeometry x="45" y="92" width="10" height="68" as="geometry" />
+        </mxCell>
+        <mxCell id="l1KVzMSHZLaGL1OvyLBm-19" value="" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" vertex="1" parent="l1KVzMSHZLaGL1OvyLBm-17">
+          <mxGeometry x="45" y="272" width="10" height="78" as="geometry" />
+        </mxCell>
+        <mxCell id="l1KVzMSHZLaGL1OvyLBm-21" value="&lt;span&gt;&lt;font style=&quot;font-size: 9px;&quot;&gt;Navigate to my profile page&lt;/font&gt;&lt;/span&gt;" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;fontSize=10;" edge="1" parent="1" target="l1KVzMSHZLaGL1OvyLBm-6">
+          <mxGeometry x="0.005" width="80" relative="1" as="geometry">
+            <mxPoint x="55" y="222" as="sourcePoint" />
+            <mxPoint x="175" y="222" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="l1KVzMSHZLaGL1OvyLBm-22" value="HTTP GET /profile" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;" edge="1" parent="1" target="l1KVzMSHZLaGL1OvyLBm-10">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="200" y="242" as="sourcePoint" />
+            <mxPoint x="280" y="242" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="l1KVzMSHZLaGL1OvyLBm-23" value="Forward API request" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;" edge="1" parent="1" target="l1KVzMSHZLaGL1OvyLBm-18">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="360" y="252" as="sourcePoint" />
+            <mxPoint x="440" y="252" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="l1KVzMSHZLaGL1OvyLBm-24" value="Provide profile data as JSON" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;curved=0;rounded=0;" edge="1" parent="1">
+          <mxGeometry x="-0.0008" relative="1" as="geometry">
+            <mxPoint x="520" y="320" as="sourcePoint" />
+            <mxPoint x="359" y="320" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="l1KVzMSHZLaGL1OvyLBm-25" value="Craft web page &amp;amp; return it" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;curved=0;rounded=0;" edge="1" parent="1">
+          <mxGeometry x="0.002" relative="1" as="geometry">
+            <mxPoint x="349" y="342" as="sourcePoint" />
+            <mxPoint x="199" y="342" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="l1KVzMSHZLaGL1OvyLBm-26" value="&lt;font style=&quot;font-size: 10px;&quot;&gt;Present web page&lt;/font&gt;" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;curved=0;rounded=0;" edge="1" parent="1">
+          <mxGeometry x="0.0004" relative="1" as="geometry">
+            <mxPoint x="189" y="362" as="sourcePoint" />
+            <mxPoint x="55" y="362" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="l1KVzMSHZLaGL1OvyLBm-27" value="Query profile data" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;" edge="1" parent="1">
+          <mxGeometry x="-0.0014" width="80" relative="1" as="geometry">
+            <mxPoint x="530" y="267" as="sourcePoint" />
+            <mxPoint x="680" y="267" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="l1KVzMSHZLaGL1OvyLBm-28" value="Return data" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;curved=0;rounded=0;" edge="1" parent="1">
+          <mxGeometry x="-0.0008" relative="1" as="geometry">
+            <mxPoint x="687" y="302" as="sourcePoint" />
+            <mxPoint x="530" y="302" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="l1KVzMSHZLaGL1OvyLBm-29" value="&lt;font size=&quot;1&quot;&gt;Press my applications button&lt;/font&gt;" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;fontSize=10;" edge="1" parent="1">
+          <mxGeometry x="0.0125" width="80" relative="1" as="geometry">
+            <mxPoint x="55" y="398" as="sourcePoint" />
+            <mxPoint x="194" y="398" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="l1KVzMSHZLaGL1OvyLBm-30" value="HTTP GET /profile/applications" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;fontSize=9;" edge="1" parent="1" target="l1KVzMSHZLaGL1OvyLBm-9">
+          <mxGeometry x="0.0018" width="80" relative="1" as="geometry">
+            <mxPoint x="200" y="420.63" as="sourcePoint" />
+            <mxPoint x="350" y="421" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="l1KVzMSHZLaGL1OvyLBm-31" value="Forward API request" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="360" y="432" as="sourcePoint" />
+            <mxPoint x="519" y="432" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="l1KVzMSHZLaGL1OvyLBm-32" value="Query job applications" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;" edge="1" parent="1">
+          <mxGeometry x="-0.0025" width="80" relative="1" as="geometry">
+            <mxPoint x="530" y="452" as="sourcePoint" />
+            <mxPoint x="680" y="452" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="l1KVzMSHZLaGL1OvyLBm-33" value="Return data" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;curved=0;rounded=0;" edge="1" parent="1">
+          <mxGeometry x="-0.0008" relative="1" as="geometry">
+            <mxPoint x="686" y="488" as="sourcePoint" />
+            <mxPoint x="529" y="488" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="l1KVzMSHZLaGL1OvyLBm-34" value="Provide applications&lt;div&gt;&lt;span style=&quot;background-color: light-dark(#ffffff, var(--ge-dark-color, #121212)); color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;data as JSON&amp;nbsp;&lt;/span&gt;&lt;/div&gt;" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;curved=0;rounded=0;" edge="1" parent="1">
+          <mxGeometry x="0.003" relative="1" as="geometry">
+            <mxPoint x="520" y="510" as="sourcePoint" />
+            <mxPoint x="359" y="510" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="l1KVzMSHZLaGL1OvyLBm-35" value="Craft web page &amp;amp; return it" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;curved=0;rounded=0;" edge="1" parent="1">
+          <mxGeometry x="0.002" relative="1" as="geometry">
+            <mxPoint x="350" y="532" as="sourcePoint" />
+            <mxPoint x="200" y="532" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="l1KVzMSHZLaGL1OvyLBm-36" value="&lt;font style=&quot;font-size: 10px;&quot;&gt;Present web page&lt;/font&gt;" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;curved=0;rounded=0;" edge="1" parent="1">
+          <mxGeometry x="0.0004" relative="1" as="geometry">
+            <mxPoint x="189" y="552" as="sourcePoint" />
+            <mxPoint x="55" y="552" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{layout.html}">
+<body>
+<main layout:fragment="content" class="flex flex-row flex-grow justify-center items-center">
+    <form class="flex flex-col gap-3 w-full mx-[30%]"
+          action="#"
+          th:action="@{~/student/signup}"
+          method="post"
+          th:object="${registrationRequest}">
+        <div class="flex flex-col gap-1">
+            <label class="font-semibold" for="firstname">
+                First Name
+            </label>
+            <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                   th:field="*{firstName}" id="firstname" type="text" placeholder="John">
+            <div class="text-red-600" th:if="${#fields.hasErrors('firstName')}" th:errors="*{firstName}"/>
+        </div>
+        <div class="flex flex-col gap-1">
+            <label class="font-semibold" for="firstname">
+                Last Name
+            </label>
+            <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                   th:field="*{lastName}" id="lastname" type="text" placeholder="Doe">
+            <div class="text-red-600" th:if="${#fields.hasErrors('lastName')}" th:errors="*{lastName}"/>
+        </div>
+        <div class="flex flex-col gap-1">
+            <label class="font-semibold" for="institution">
+                Educational Institution
+            </label>
+            <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                   th:field="*{institution}" id="institution" type="text" placeholder="Netanya Academic College">
+            <div class="text-red-600" th:if="${#fields.hasErrors('institution')}" th:errors="*{institution}"/>
+        </div>
+        <div class="flex flex-col gap-1">
+            <label class="font-semibold" for="qualification">
+                Qualification
+            </label>
+            <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                   th:field="*{qualification}" id="qualification" type="text" placeholder="BSc Computer Science">
+            <div class="text-red-600" th:if="${#fields.hasErrors('qualification')}" th:errors="*{qualification}"/>
+        </div>
+        <div class="flex flex-col gap-1">
+            <label class="font-semibold" for="username">
+                Username
+            </label>
+            <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                   th:field="*{username}" id="username" type="text" placeholder="johndoe">
+            <div class="text-red-600" th:if="${#fields.hasErrors('username')}" th:errors="*{username}"/>
+        </div>
+        <div class="flex flex-col gap-1">
+            <label class="font-semibold" for="password">
+                Password
+            </label>
+            <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                   th:field="*{password}" id="password" type="password" placeholder="Password...">
+            <div class="text-red-600" th:if="${#fields.hasErrors('password')}" th:errors="*{password}"/>
+        </div>
+        <div class="flex flex-col gap-1">
+            <label class="font-semibold" for="resume">
+                Resume
+            </label>
+            <input
+                    th:field="*{resume}"
+                    id="resume"
+                    type="file"
+                    accept="text/plain"
+                    class="file:mr-4 file:py-2 file:px-4
+         file:rounded file:border-0
+         file:text-sm file:font-semibold
+         file:bg-zinc-500 file:text-slate-100
+         hover:file:bg-zinc-700"
+            />
+            <div class="text-red-600" th:if="${#fields.hasErrors('resume')}" th:errors="*{resume}"/>
+        </div>
+        <button type="submit">Register</button>
+    </form>
+</main>
+</body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{layout.html}">
+<body>
+<main layout:fragment="content" class="flex flex-row flex-grow">
+    <div class="flex flex-col w-full gap-3 p-3">
+        <div class="flex flex-row justify-between">
+            <h2 class="font-semibold text-2xl">
+                <th:block th:if="${userRole == 'student'}" th:text="'My Applications'"/>
+                <th:block th:if="${userRole == 'recruiter'}" th:text="'Student Applications'"/>
+            </h2>
+            <div class="inline-flex rounded-md shadow-xs" role="group">
+                <a
+                        th:classappend="${numPages > 0 ? 'pointer-events-none' : ''}"
+                        class="px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-s-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-blue-500 dark:focus:text-white"
+                        th:href="@{~/applications/?page={nextPage}(nextPage=${page - 1})}"
+                >
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                         stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                              d="M6.75 15.75 3 12m0 0 3.75-3.75M3 12h18"/>
+                    </svg>
+                </a>
+                <a
+                        th:classappend="${page < numPages ? 'pointer-events-none' : ''}"
+                        class="px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-e-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-blue-500 dark:focus:text-white"
+                        th:href="@{~/applications/?page={nextPage}(nextPage=${page + 1})}"
+                >
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                         stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                              d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+        <div class="relative overflow-x-auto">
+            <table class="w-full text-sm text-left text-zinc-500">
+                <thead class="text-xs text-black uppercase bg-zinc-200">
+                <tr>
+                    <th scope="col" class="px-6 py-3">
+                        Title
+                    </th>
+                    <th scope="col" class="px-6 py-3">
+                        <th:block th:if="${userRole == 'recruiter'}" th:text="'Student'"/>
+                        <th:block th:if="${userRole == 'student'}" th:text="'Recruiter'"/>
+                    </th>
+                    <th scope="col" class="px-6 py-3">
+                        <th:block th:if="${userRole == 'recruiter'}" th:text="'Student ID'"/>
+                        <th:block th:if="${userRole == 'student'}" th:text="'Salary'"/>
+                    </th>
+                    <th scope="col" class="px-6 py-3">
+                        Status
+                    </th>
+                    <th scope="col" class="px-6 py-3">
+                        Options
+                    </th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr
+                        class="border-b border-gray-200"
+                        th:each="app : ${apps}"
+                >
+                    <th th:text="${app.jobListing.title}" scope="row"
+                        class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap"></th>
+                    <td th:if="${userRole == 'recruiter'}" th:text="${app.student.fullName()}" class="px-6 py-4">
+                    </td>
+                    <td th:if="${userRole == 'student'}" th:text="${app.jobListing.recruiter.name}" class="px-6 py-4">
+                    </td>
+                    <td th:if="${userRole == 'recruiter'}" th:text="${app.student.id}" class="px-6 py-4">
+                    </td>
+                    <td th:if="${userRole == 'student'}" th:text="'$' + ${app.jobListing.annualSalary}"
+                        class="px-6 py-4">
+                    </td>
+                    <td th:text="${app.status}"
+                        class="px-6 py-4">
+                    </td>
+                    <td class="px-6 py-4">
+                        <div class="inline-flex rounded-md shadow-xs" role="group">
+                            <a
+                                    th:href="@{/job/application/{id}/resume(id=${app.jobListing.id})}"
+                                    class="px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-s-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-blue-500 dark:focus:text-white">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                     stroke-width="1.5" stroke="currentColor" class="size-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                          d="M9 8.25H7.5a2.25 2.25 0 0 0-2.25 2.25v9a2.25 2.25 0 0 0 2.25 2.25h9a2.25 2.25 0 0 0 2.25-2.25v-9a2.25 2.25 0 0 0-2.25-2.25H15M9 12l3 3m0 0 3-3m-3 3V2.25"/>
+                                </svg>
+                            </a>
+                            <form action="#" th:action="@{/job/application/{id}(id=${app.id})}" method="post">
+                                <input hidden name="accept" value="true">
+                                <button
+                                        type="submit"
+                                        th:if="${userRole == 'recruiter'}"
+                                        class="px-4 py-2 text-sm font-medium text-gray-900 bg-white border-t border-b border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-blue-500 dark:focus:text-white"
+                                >
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                         stroke-width="1.5" stroke="currentColor" class="size-6">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/>
+                                    </svg>
+                                </button>
+                            </form>
+                            <form action="#" th:action="@{/job/application/{id}(id=${app.id})}" method="post">
+                                <input hidden name="delete" value="true">
+                                <button
+                                        type="submit"
+                                        class="px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200
+                                rounded-e-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2
+                                focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-800 dark:border-gray-700
+                                dark:text-white dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-blue-500
+                                dark:focus:text-white">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                         stroke-width="1.5" stroke="currentColor" class="size-6">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12"/>
+                                    </svg>
+                                </button>
+                            </form>
+                        </div>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</main>
+</body>
+</html>

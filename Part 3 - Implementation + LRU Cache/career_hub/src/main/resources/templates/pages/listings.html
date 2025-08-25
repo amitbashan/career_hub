@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{layout.html}">
+<body>
+<main layout:fragment="content" class="flex flex-row flex-grow">
+    <div class="flex flex-col w-full gap-3 p-3">
+        <div class="flex flex-row justify-between">
+            <h2 class="font-semibold text-2xl">
+                Job Listings
+            </h2>
+            <div class="inline-flex rounded-md shadow-xs" role="group">
+                <a
+                        th:classappend="${numPages > 0 ? 'pointer-events-none' : ''}"
+                        class="px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-s-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-blue-500 dark:focus:text-white"
+                        th:href="@{~/listings/?page={nextPage}(nextPage=${page - 1})}"
+                >
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                         stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                              d="M6.75 15.75 3 12m0 0 3.75-3.75M3 12h18"/>
+                    </svg>
+                </a>
+                <a
+                        th:if="${userRole == 'recruiter'}"
+                        class="px-4 py-2 text-sm font-medium text-gray-900 bg-white border-t border-b border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-blue-500 dark:focus:text-white"
+                        th:href="@{~/listings/mine}"
+                >
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M11.42 15.17 17.25 21A2.652 2.652 0 0 0 21 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 1 1-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 0 0 4.486-6.336l-3.276 3.277a3.004 3.004 0 0 1-2.25-2.25l3.276-3.276a4.5 4.5 0 0 0-6.336 4.486c.091 1.076-.071 2.264-.904 2.95l-.102.085m-1.745 1.437L5.909 7.5H4.5L2.25 3.75l1.5-1.5L7.5 4.5v1.409l4.26 4.26m-1.745 1.437 1.745-1.437m6.615 8.206L15.75 15.75M4.867 19.125h.008v.008h-.008v-.008Z" />
+                    </svg>
+                </a>
+                <a
+                        th:classappend="${page < numPages ? 'pointer-events-none' : ''}"
+                        class="px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-e-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-blue-500 dark:focus:text-white"
+                        th:href="@{~/listings/?page={nextPage}(nextPage=${page + 1})}"
+                >
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                         stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                              d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+        <div class="relative overflow-x-auto">
+            <table class="w-full text-sm text-left text-zinc-500">
+                <thead class="text-xs text-black uppercase bg-zinc-200">
+                <tr>
+                    <th scope="col" class="px-6 py-3">
+                        Title
+                    </th>
+                    <th scope="col" class="px-6 py-3">
+                        Recruiter
+                    </th>
+                    <th scope="col" class="px-6 py-3">
+                        Salary
+                    </th>
+                    <th scope="col" class="px-6 py-3">
+                        Open?
+                    </th>
+                    <th scope="col" class="px-6 py-3">
+                    </th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr th:classappend="${listing.open ? 'bg-white' : 'bg-gray-50'}"
+                    class="border-b border-gray-200"
+                    th:each="listing : ${listings}"
+                >
+                    <th th:text="${listing.title}" scope="row"
+                        class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap"></th>
+                    <td th:text="${listing.recruiter.name}" class="px-6 py-4">
+                    </td>
+                    <td th:text="'$' + ${listing.annualSalary}" class="px-6 py-4">
+                    </td>
+                    <td th:text="${listing.open ? 'Yes' : 'No'}" class="px-6 py-4">
+                    </td>
+                    <td class="px-6 py-4">
+                        <a
+                                th:href="@{/job/listing/{id}(id=${listing.id})}"
+                                class="text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-full text-sm px-5 py-2.5">
+                            View
+                        </a>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</main>
+</body>
+</html>

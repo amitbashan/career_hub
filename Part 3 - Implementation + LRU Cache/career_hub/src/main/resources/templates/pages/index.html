@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{layout.html}">
+<body>
+<main layout:fragment="content" class="flex flex-row flex-grow p-4">
+    <div th:unless="${userRole == 'guest'}" class="flex flex-col flex-grow gap-2">
+        <div class="flex-1 flex flex-col">
+            <span class="font-semibold">
+                Recent job applications
+            </span>
+            <div class="flex-1 mt-2 rounded-lg shadow border border-zinc-300 p-4 gap-1">
+
+            </div>
+        </div>
+        <div class="flex-1 flex flex-col">
+            <span class="font-semibold">
+                Recently published job listings
+            </span>
+            <div class="flex-1 mt-2 rounded-lg shadow border border-zinc-300 p-4 gap-1">
+
+            </div>
+        </div>
+    </div>
+    <div th:if="${userRole == 'guest'}" class="flex flex-row flex-grow justify-center items-center">
+        <div class="flex flex-col items-center gap-4">
+            <span class="text-4xl font-semibold">
+                Looking to hire or looking to work?
+            </span>
+            <div class="flex flex-row gap-6">
+                <a th:href="@{~/recruiter/signup}" href="#" class="inline-block text-lg font-semibold text-sky-500 hover:text-sky-600 dark:text-sky-400">
+                    I'm looking to hire
+                </a>
+                <a th:href="@{~/student/signup}" class="inline-block text-lg font-semibold text-sky-500 hover:text-sky-600 dark:text-sky-400">
+                    I'm looking for a job
+                </a>
+            </div>
+        </div>
+    </div>
+</main>
+</body>
+</html>
